@@ -129,7 +129,7 @@ body{
 /* ======================intro======================= */
 .intro{
     width: 100%;
-    height: calc(100lvh - 157px);
+    height: calc(100svh - 157px);
     background-image: url(../img/intro-bg/intro-bg.png);
     background-size: cover;
     background-repeat: no-repeat;
