@@ -130,14 +130,17 @@ body{
 .intro{
     width: 100%;
     height: calc(100dvh - 157px);
+    min-height: 619px;
     background-image: url(../img/intro-bg/intro-bg.png);
     background-size: cover;
     background-repeat: no-repeat;
     object-fit: cover;
     background-position: center center;
+    overflow-y: auto;
 }
 .intro-content__container{
     height: 100%;
+    min-height: 315px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -155,12 +158,17 @@ body{
     color: #fff;
     font-family: Poppins;
     font-size: calc(24px + 34 * ((100vw - 320px) / (1280 - 320)));
+    line-height: normal;
     font-weight: 700;
 }
 .intro__subtitle{
     margin-bottom: 50px;
     text-align: center;
     color: #f6f6f6;
+}
+.intro__btn{
+    position: relative;
+    z-index: 3;
 }
 .intro__btn-playstore{
     padding: 16px 50px;
@@ -176,6 +184,7 @@ body{
     border: 1px solid #FFF;
     color: #fff;
     font-weight: 700;
+    transition: background-color 0.5s ;
 }
 .intro__btn-playstore:hover{
     background-color: #FA4A0C;
@@ -185,9 +194,72 @@ body{
     background-color: #FA4A0C;
     border: 1px solid transparent;
 }
+/* ======================phone-img======================== */
+.phone-img__container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 
+}
+.phone-img__img{
+    max-width: 100%;
+    max-height: 100%;
+    margin-top: -260px;
+    margin-left: -35px;
+    position: relative;
+    z-index: 2;
+}
+.phone-img__border{
+    max-width: 100%;
+    width: 884px;
+    height: 3px;
+    background-color: #e4e4e4;
+    margin-bottom: 72px;
+}
+/* ============================app-works===================== */
+.app-works__title{
+    text-align: center;
+    color: #000;
+    font-family: Poppins;
+    font-size: 44px;
+    font-style: normal;
+    font-weight: 600;
+    letter-spacing: 0.1px;
+    margin-bottom: 130px;
+}   
+.app-works__block{
+    display: flex;
+}
+.app-works__block-left{
+    width: 50%; 
+}
+.app-works__img{
+    display: block;
+    margin: 0 auto;
+}
+.app-works__block-right{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 50%;
+}
+.app-works__blokc-overtitle{
+    color: #FA4A0C;
+    font-weight: 700;
+    margin-bottom: 17px;
 
-
+}
+.app-works__block-title{
+    color: #252B42;
+    font-family: Montserrat;
+    font-size: 40px;
+    font-style: normal;
+    font-weight: 700;
+    margin-bottom: 27px;
+}
+.app-works__block-subtitle{
+    max-width: 467px;
+}
 
 
 
@@ -267,5 +339,26 @@ body{
     .intro__subtitle{
         margin-bottom: 35px;
         font-size: 17px;
+    }
+}
+/* ======================phone-img======================= */
+@media (max-width: 550px){
+    .phone-img__img{
+        margin-top: -215px;
+    }
+    .app-works__block{
+        flex-wrap: wrap;
+    }
+    .app-works__block-left{
+        width: 100%;  
+    }
+    .app-works__block-right{
+        width: 100%;
+    }
+
+}
+@media (max-width: 450px){
+    .phone-img__img{
+        margin-top: -185px;
     }
 }
