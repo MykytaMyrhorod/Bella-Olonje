@@ -110,6 +110,7 @@ body{
     left: 4px;
     border-radius: 4px;
     transition: transform 0.4s;
+    z-index: 6;
 }
 .header__mobile-menu span:nth-child(1){
     transform: translateY(-10px);
@@ -217,11 +218,14 @@ body{
     margin-bottom: 72px;
 }
 /* ============================app-works===================== */
+.app-works{
+    margin-bottom: 70px;
+}
 .app-works__title{
     text-align: center;
     color: #000;
     font-family: Poppins;
-    font-size: 44px;
+    font-size: calc(28px + 16 * ((100vw - 320px) / (1325 - 320)));
     font-style: normal;
     font-weight: 600;
     letter-spacing: 0.1px;
@@ -247,22 +251,102 @@ body{
     color: #FA4A0C;
     font-weight: 700;
     margin-bottom: 17px;
+    font-size: calc(22px + 2 * ((100vw - 320px) / (1325 - 320)));
 
 }
 .app-works__block-title{
     color: #252B42;
     font-family: Montserrat;
-    font-size: 40px;
+    font-size: calc(26px + 14 * ((100vw - 320px) / (1325 - 320)));
     font-style: normal;
     font-weight: 700;
     margin-bottom: 27px;
 }
 .app-works__block-subtitle{
     max-width: 467px;
+    font-size: calc(19px + 5 * ((100vw - 320px) / (1325 - 320)));
 }
 
 
 
+.varieties{
+    margin-bottom: 70px;
+}
+.varieties__block{
+    display: flex;
+}
+.varieties__block-right{
+    width: 50%; 
+}
+.varieties__img{
+    display: block;
+    margin: 0 auto;
+}
+.varieties__block-left{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 50%;
+    align-items: flex-end;
+}
+.varieties__blokc-overtitle{
+    color: #FA4A0C;
+    font-weight: 700;
+    margin-bottom: 17px;
+    font-size: calc(22px + 2 * ((100vw - 320px) / (1325 - 320)));
+}
+.varieties__block-title{
+    color: #252B42;
+    font-family: Montserrat;
+    font-size: calc(26px + 14 * ((100vw - 320px) / (1325 - 320)));
+    font-style: normal;
+    font-weight: 700;
+    margin-bottom: 27px;
+    max-width: 480px;
+}
+.varieties__block-subtitle{
+    max-width: 467px;
+    font-size: calc(19px + 5 * ((100vw - 320px) / (1325 - 320)));
+}
+
+.checkout{
+    margin-bottom: 70px;
+}
+.checkout__block{
+    display: flex;
+}
+.checkout__block-left{
+    width: 50%; 
+}
+.checkout__img{
+    display: block;
+    margin: 0 auto;
+}
+.checkout__block-right{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 50%;
+}
+.checkout__blokc-overtitle{
+    color: #FA4A0C;
+    font-weight: 700;
+    margin-bottom: 17px;
+    font-size: calc(22px + 2 * ((100vw - 320px) / (1325 - 320)));
+
+}
+.checkout__block-title{
+    color: #252B42;
+    font-family: Montserrat;
+    font-size: calc(26px + 14 * ((100vw - 320px) / (1325 - 320)));
+    font-style: normal;
+    font-weight: 700;
+    margin-bottom: 27px;
+}
+.checkout__block-subtitle{
+    max-width: 467px;
+    font-size: calc(19px + 5 * ((100vw - 320px) / (1325 - 320)));
+}
 
 
 
@@ -297,6 +381,7 @@ body{
         background-color: #f46531;
         overflow: auto;
         visibility: hidden;
+        z-index: 5;
     }
     .menu__item:not(:last-child){
         margin-right: 0;
@@ -315,6 +400,9 @@ body{
     .header.open .menu{
         transform: translateX(-100%);
         visibility: visible;
+    }
+    .app-works__title{
+        margin-bottom: 75px;
     }
 }
 /* ======================intro======================= */
@@ -350,9 +438,30 @@ body{
         flex-wrap: wrap;
     }
     .app-works__block-left{
-        width: 100%;  
+        width: 100%;
+        margin-bottom: 30px;  
     }
     .app-works__block-right{
+        width: 100%;
+    }
+    .varieties__block{
+        flex-wrap: wrap-reverse;
+    }
+    .varieties__block-left{
+        width: 100%;
+    }
+    .varieties__block-right{
+        width: 100%;
+        margin-bottom: 30px;
+    }
+    .checkout__block{
+        flex-wrap: wrap;
+    }
+    .checkout__block-left{
+        width: 100%;
+        margin-bottom: 30px;  
+    }
+    .checkout__block-right{
         width: 100%;
     }
 
@@ -360,5 +469,37 @@ body{
 @media (max-width: 450px){
     .phone-img__img{
         margin-top: -185px;
+    }
+}
+@media (min-width: 1325px){
+    .app-works__title{
+        font-size: 44px;
+    }
+    .app-works__blokc-overtitle{
+        font-size: 22px;
+    }
+    .app-works__block-title{
+        font-size: 40px;
+    }
+    .app-works__block-subtitle{
+        font-size: 24px;
+    }
+    .varieties__blokc-overtitle{
+        font-size: 22px;
+    }
+    .varieties__blokc-title{
+        font-size: 40px;
+    }
+    .varieties__blokc-subtitle{
+        font-size: 24px;
+    }
+    .checkout__blokc-overtitle{
+        font-size: 22px;
+    }
+    .checkout__blokc-title{
+        font-size: 40px;
+    }
+    .checkout__blokc-subtitle{
+        font-size: 24px;
     }
 }
